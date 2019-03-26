@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:stretchColumns="1">
+
+    <TableRow>
+
+        <TextView
+            android:layout_column="1"
+            android:padding="3dp"
+            android:text="Open..." />
+
+        <TextView
+            android:gravity="right"
+            android:padding="3dp"
+            android:text="Ctrl-O" />
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+            android:layout_column="1"
+            android:padding="3dp"
+            android:text="Save..." />
+
+        <TextView
+            android:gravity="right"
+            android:padding="3dp"
+            android:text="Ctrl-S" />
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+            android:layout_column="1"
+            android:padding="3dp"
+            android:text="Save As..." />
+
+        <TextView
+            android:gravity="right"
+            android:padding="3dp"
+            android:text="Ctrl-Shift-S" />
+    </TableRow>
+
+    <View
+        android:layout_height="2dip"
+        android:background="#FF909090" />
+
+    <TableRow>
+        <TextView
+            android:padding="3dp"
+            android:text="X" />
+        <TextView
+            android:padding="3dp"
+            android:text="Import..." />
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:padding="3dp"
+            android:text="X" />
+        <TextView
+            android:padding="3dp"
+            android:text="Export..." />
+        <TextView android:padding="3dp"
+            android:text="Ctrl-E"
+            android:gravity="right"/>
+    </TableRow>
+    <View
+        android:layout_height="2dp"
+        android:background="#FF909090">
+    </View>
+
+    <TableRow>
+        <TextView
+            android:layout_column="1"
+            android:padding="3dp"
+            android:text="Quit"/>
+    </TableRow>
+
+
+</TableLayout>
