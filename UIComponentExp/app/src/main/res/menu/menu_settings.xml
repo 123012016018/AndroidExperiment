@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="字体大小">
+        <menu>
+            <item
+                android:id="@+id/menu_font_small"
+                android:title="小号"/>
+            <item
+                android:id="@+id/menu_font_middle"
+                android:title="中号"/>
+            <item
+                android:id="@+id/menu_font_big"
+                android:title="大号"/>
+        </menu>
+
+    </item>
+    <item
+        android:id="@+id/menu_normal"
+        android:title="普通菜单项">
+    </item>
+    <item android:title="字体颜色">
+        <menu>
+            <item
+                android:id="@+id/menu_color_red"
+                android:title="红色" />
+            <item
+                android:id="@+id/menu_color_black"
+                android:title="黑色"/>
+        </menu>
+    </item>
+</menu>
