@@ -143,7 +143,7 @@ public class NoteDAO {
 ```
 
 *功能实现后如下图所示：*
-![]()
+![](https://github.com/123012016018/AndroidExperiment/blob/master/NotePad/screenshot/date.png)
 
 ### 添加基于标题的搜索功能
 * **首先在activity_main.xml中添加一个搜索框 EditText**
@@ -190,16 +190,16 @@ etSearch = findViewById(R.id.et_search);
 String sql = "select * from "+TABLE_NAME+" where title like '%"+keyword+"%'";
 ```
 * **搜索功能完成后的效果图如下:**
-![]()
+![](https://github.com/123012016018/AndroidExperiment/blob/master/NotePad/screenshot/search.png)
 
 ### 美化UI
 * **重新设计了记事本的应用布局,使得看上去更美观**
 * **主界面效果图:**
-![]()
+![](https://github.com/123012016018/AndroidExperiment/blob/master/NotePad/screenshot/main.png)
 * **笔记编辑界面:**
-![]()
+![](https://github.com/123012016018/AndroidExperiment/blob/master/NotePad/screenshot/addNote.png)
 * **笔记删除按钮与提示:**
-![]()
+![](https://github.com/123012016018/AndroidExperiment/blob/master/NotePad/screenshot/deleteNote.png)
 
 ### 高亮搜索结果的关键字
 * **关键代码如下:**
@@ -231,7 +231,7 @@ tvTitle.setText(highlight(noteVO.getTitle(),keyword,"#EA2D2D",0,0));
 ```
 设置完后,TextView中的关键字就会高亮显示
 * **效果如下:**
-![]()
+![](https://github.com/123012016018/AndroidExperiment/blob/master/NotePad/screenshot/highlight.png)
 
 ### 云备份
 首先创建一个web应用，提供两个REST API接口<br>
@@ -305,7 +305,7 @@ public class HttpUtils {
     }
 ```
 * **截图**
-![]()
+![](https://github.com/123012016018/AndroidExperiment/blob/master/NotePad/screenshot/backup.png)
 
 ### 同步
 * **从服务器获取数据然后反序列化成NoteVO对象保存到本地**
@@ -335,6 +335,6 @@ public class HttpUtils {
 ```
 
 * **同步前:**
-![]()
+![](https://github.com/123012016018/AndroidExperiment/blob/master/NotePad/screenshot/before.png)
 * **同步后:**
-![]()
+![](https://github.com/123012016018/AndroidExperiment/blob/master/NotePad/screenshot/after.png)
