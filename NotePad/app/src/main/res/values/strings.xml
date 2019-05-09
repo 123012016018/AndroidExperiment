@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">NotePad</string>
+    <string name="et_search">Search...</string>
+    <string name="title">请输入标题:</string>
+    <string name="content">请输入笔记内容:</string>
+    <string name="save">保存</string>
+</resources>

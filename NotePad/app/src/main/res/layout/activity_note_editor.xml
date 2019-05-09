@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <EditText
+            android:id="@+id/et_adt_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_10"
+            android:background="@drawable/et_line_bg"
+            android:gravity="center_vertical"
+            android:hint="@string/title"
+            android:padding="@dimen/dp_10"
+            android:textSize="14sp"
+            android:textColorHint="#19443D" />
+
+
+        <EditText
+            android:id="@+id/et_adt_content"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_10"
+            android:background="@drawable/et_line_bg"
+            android:gravity="top|left"
+            android:hint="@string/content"
+            android:padding="@dimen/dp_10"
+            android:textSize="14sp"
+            android:textColorHint="#19443D" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+
+        <Button
+            android:id="@+id/btn_adt_save"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_10"
+            android:background="@mipmap/circle_bg"
+            android:layout_marginBottom="@dimen/dp_30"
+            android:text="@string/save"
+            android:textColor="#19443D"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+
+
+
+</FrameLayout>
