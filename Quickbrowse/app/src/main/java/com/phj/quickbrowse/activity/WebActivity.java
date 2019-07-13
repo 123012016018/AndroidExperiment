@@ -1,46 +1,36 @@
-package com.example.mybrower;
+package com.phj.quickbrowse.activity;
 
+import android.app.Activity;
 import android.content.Intent;
-import android.net.Uri;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.webkit.CookieManager;
 import android.webkit.CookieSyncManager;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import android.widget.TextView;
 
-import java.net.MalformedURLException;
-import java.net.URL;
+import com.phj.quickbrowse.R;
 
-public class MainActivity extends AppCompatActivity {
-    private static final String JWGL_URL = "http://jwgl.fjnu.edu.cn/";
-    private static final String COOKIE_TEST = "UM_distinctid=1696fc8ec3e1b0-0585ff9addbe6b-1333062-100200-1696fc8ec3f2f4; ASP.NET_SessionId=u0yuy155z3nwod45twj5gbmy; Secure";
-
+public class WebActivity extends Activity {
     private WebView webView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.web_activity);
         webView = findViewById(R.id.webView);
         Intent intent = getIntent();
-        Uri uri = intent.getData();
-        if (uri==null) return;
-        URL url = null;
-        try {
-            url = new URL(uri.getScheme(), uri.getHost(), uri.getPath());
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
-        }
+        Bundle bundle = intent.getExtras();
+        String url = bundle.getString("callback");
+        String cookie = bundle.getString("cookie");
+        startBrowser(url,cookie);
 
-        startBrowser(url.toString());
+//        startBrowser(url.toString());
     }
 
-    private void startBrowser(String url) {
+    private void startBrowser(String url,String cookie) {
         if(url==null) return;
-        setCookie(JWGL_URL,COOKIE_TEST);
+        setCookie(url,cookie);
         webView.loadUrl(url);
         webView.setWebViewClient(new WebViewClient(){
             @Override
@@ -75,6 +65,4 @@ public class MainActivity extends AppCompatActivity {
         }
         return url;
     }
-
-
 }

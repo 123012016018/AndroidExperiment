@@ -1,4 +1,6 @@
-package com.example.notepad.http;
+package com.phj.quickbrowse.util;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.IOException;
 import java.util.Iterator;
@@ -30,7 +32,8 @@ public class HttpUtils {
     }
 
     //将数据post到服务器上
-    public static void postData(String url, Map<String, String> map) {
+    public static String postData(String url, Map<String, String> map) {
+        String result = "";
         OkHttpClient okHttpClient = new OkHttpClient();
         FormBody.Builder builder = new FormBody.Builder();
         Iterator<String> iterator = map.keySet().iterator();
@@ -44,9 +47,24 @@ public class HttpUtils {
                 .build();
         Call call = okHttpClient.newCall(request);
         try {
-            call.execute();
+            Response response = call.execute();
+            result = response.body().string();
         } catch (IOException e) {
             e.printStackTrace();
         }
+        return result;
+    }
+
+    public static String getCookieByPost(String url, Map<String, String> map) {
+        String result = null;
+        String json = postData(url, map);
+        ObjectMapper mapper = new ObjectMapper();
+        try {
+            Map<String,String> value = mapper.readValue(json, Map.class);
+            result = value.get("cookie");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return result;
     }
 }

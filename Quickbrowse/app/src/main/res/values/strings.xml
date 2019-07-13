@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Quickbrowse</string>
+    <string name="JWGL_SERVER_URL">www.penghaojie.cn:2001/api</string>
+</resources>

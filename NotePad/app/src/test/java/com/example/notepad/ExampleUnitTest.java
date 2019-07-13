@@ -9,6 +9,7 @@ import org.junit.Test;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.Map;
 
 import static org.junit.Assert.*;
 
@@ -39,5 +40,14 @@ public class ExampleUnitTest {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    @Test
+    public void convertJsonToMapTest() throws IOException {
+        String json = "{\"code\":302,\"cookie\":\"ASP.NET_SessionId=3sz4ng45uimve2550e1is555; path=/\"}";
+        ObjectMapper mapper = new ObjectMapper();
+        Map map = mapper.readValue(json, Map.class);
+        System.out.println(map.get("cookie"));
+
     }
 }
